@@ -1,8 +1,10 @@
 package MeetingSystem;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
-public class Event {
+public class Event implements Comparable{
 
     private String name;
     private String theme;
@@ -13,6 +15,12 @@ public class Event {
     private int maxSlots;
     private int currentSlots;
     private boolean accepted;
+    private User eventCreator;
+    private List<User> userList = new ArrayList<>();
+
+    public Event(User user) {
+        setEventCreator(user);
+    }
 
 
     public int getMinSlots() {
@@ -85,5 +93,26 @@ public class Event {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
+
+    public User getEventCreator() {
+        return eventCreator;
+    }
+
+    public void setEventCreator(User eventCreator) {
+        this.eventCreator = eventCreator;
+    }
+
+    public List<User> getUserList() {
+        return userList;
+    }
+
+    public void setUserList(List<User> userList) {
+        this.userList = userList;
     }
 }
