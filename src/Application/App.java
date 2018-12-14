@@ -4,14 +4,12 @@ import Helpers.SearchType;
 import MeetingSystem.Event;
 import MeetingSystem.User;
 
-import javax.jws.soap.SOAPBinding;
 import java.util.ArrayList;
-import java.util.List;
 
 public class App {
 
 
-    private List<Event> eventList = new ArrayList<>();
+    protected ArrayList<Event> eventList = new ArrayList<>();
 
 
 
@@ -31,27 +29,37 @@ public class App {
         return new Event(new User());
     }
 
-    void addEvent(User user){
-        Event e = new Event(user);
+//     public void addEvent(User user){
+//        Event e = new Event(user);
+//
+//        if (!eventList.contains(e)){
+//           eventList.add(e);
+//        }
+//    }
 
-        if (eventList.contains(e));
+    public boolean addEvent(Event event){
+        if (!eventList.contains(event)){
+            eventList.add(event);
+            return true;
+        }
+        return false;
     }
 
-    void acceptEvent(Event e){
+    public void acceptEvent(Event e){
         e.setAccepted(true);
     }
 
-    void removeEvent(Event e){
+    public void removeEvent(Event e){
         eventList.remove(e);
     }
 
-    void signUserOnEvent(User u, Event e){
+    public void signUserOnEvent(User u, Event e){
         if (e.getCurrentSlots()<e.getMaxSlots()){
             e.getUserList().add(u);
         }
     }
 
-    void checkEvent(Event e){
+    public void checkEvent(Event e){
         if (e.getMinSlots()<e.getCurrentSlots()){
             removeEvent(e);
         }
@@ -62,5 +70,13 @@ public class App {
     }
 
     void editEvent(Event e){
+    }
+
+    public ArrayList<Event> getEventList() {
+        return eventList;
+    }
+
+    public void setEventList(ArrayList<Event> eventList) {
+        this.eventList = eventList;
     }
 }
