@@ -43,8 +43,14 @@ public class App {
             return true;
         }
         return false;
-    }
-
+    } 
+    
+    public boolean searchEventReturnsTrue(Event e) //Zwraca true je¿eli event istnieje
+    {
+    	if (eventList.contains(e)) return true;
+    	else return false;
+    } 
+    
     public void acceptEvent(Event e){
         e.setAccepted(true);
     }
@@ -65,7 +71,7 @@ public class App {
         }
     }
 
-    void signOffUserFromEvent(User u, Event e){
+    public void signOffUserFromEvent(User u, Event e){
         e.getUserList().remove(u);
     }
 

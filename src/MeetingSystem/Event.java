@@ -22,7 +22,6 @@ public class Event implements Comparable{
         setEventCreator(user);
     }
 
-
     public int getMinSlots() {
         return minSlots;
     }
