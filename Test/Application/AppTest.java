@@ -44,6 +44,20 @@ class AppTest {
     }
 
     @Test
+    public void testSignUserOnEventFull(){
+
+        User user = new User();
+
+        event.setMaxSlots(12);
+        event.setCurrentSlots(12);
+
+        app.signUserOnEvent(user, event);
+
+
+        assertFalse(event.getUserList().contains(user));
+    }
+
+    @Test
     public void testSignOffUserFromEvent(){
         User user = new User();
 
@@ -55,6 +69,19 @@ class AppTest {
 
         assertFalse(event.getUserList().contains(user));
     }
+
+    @Test
+    public void testSignOffUserFromEventUnsigned(){
+        User user = new User();
+
+        event.setMaxSlots(12);
+        event.setCurrentSlots(0);
+
+        app.signOffUserFromEvent(user, event);
+
+        assertFalse(event.getUserList().contains(user));
+    }
+
     @Test
     public void testAcceptEvent() {
         app.acceptEvent(event);
@@ -66,9 +93,9 @@ class AppTest {
     public void testSearchEventsReturnsTrue()
     {
         app.addEvent(event);
-        boolean i = app.searchEventReturnsTrue(event);
+        boolean i = app.isEventExisting(event);
 
-        assertEquals(true, i);
+        assertTrue(i);
         //assertEquals(false, i);
     }
 
@@ -76,6 +103,15 @@ class AppTest {
     public void testRemoveEvent(){
 
         app.addEvent(event);
+        app.removeEvent(event);
+
+        assertFalse(app.getEventList().contains(event));
+    }
+
+
+    @Test
+    public void testRemoveNotExistingEvent(){
+
         app.removeEvent(event);
 
         assertFalse(app.getEventList().contains(event));

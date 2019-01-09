@@ -65,7 +65,7 @@ public class App {
         return false;
     } 
     
-    public boolean searchEventReturnsTrue(Event e) //Zwraca true je¿eli event istnieje
+    public boolean isEventExisting(Event e) //Zwraca true je¿eli event istnieje
     {
     	if (eventList.contains(e)) return true;
     	else return false;

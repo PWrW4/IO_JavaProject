@@ -23,13 +23,13 @@ class EventTest {
     @Test
     public void testSetCurrentSlots() {
         event.setCurrentSlots(12);
-        assertTrue(event.getCurrentSlots()==12);
+        assertEquals(12, event.getCurrentSlots());
     }
 
     @Test
     public void testIsAccepted() {
         boolean i = event.isAccepted();
-        assertEquals(false, i);
+        assertFalse(i);
     }
 
     @Test
@@ -80,7 +80,7 @@ class EventTest {
     public void testSetEventCreator() {
         User user234 = new User();
         event.setEventCreator(user234);
-        assertEquals(event.getEventCreator(), user234);
+        assertSame(event.getEventCreator(), user234);
     }
 
     @Test
