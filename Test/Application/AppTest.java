@@ -8,11 +8,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
 
-    App app = new App();
-    Event event = new Event(new User());
+    private App app = new App();
+    private Event event = new Event(new User());
 
     @Test
-    public void testAddEvent() {
+    void testAddEvent() {
 
         app.addEvent(event);
 
@@ -22,7 +22,7 @@ class AppTest {
     }
 
     @Test
-    public void testAddEventWhichExist() {
+    void testAddEventWhichExist() {
 
         app.addEvent(event);
 
@@ -30,7 +30,7 @@ class AppTest {
     }
 
     @Test
-    public void testSignUserOnEvent(){
+    void testSignUserOnEvent(){
 
         User user = new User();
 
@@ -44,7 +44,7 @@ class AppTest {
     }
 
     @Test
-    public void testSignUserOnEventFull(){
+    void testSignUserOnEventFull(){
 
         User user = new User();
 
@@ -58,7 +58,7 @@ class AppTest {
     }
 
     @Test
-    public void testSignOffUserFromEvent(){
+    void testSignOffUserFromEvent(){
         User user = new User();
 
         event.setMaxSlots(12);
@@ -71,7 +71,7 @@ class AppTest {
     }
 
     @Test
-    public void testSignOffUserFromEventUnsigned(){
+    void testSignOffUserFromEventUnsigned(){
         User user = new User();
 
         event.setMaxSlots(12);
@@ -83,14 +83,14 @@ class AppTest {
     }
 
     @Test
-    public void testAcceptEvent() {
+    void testAcceptEvent() {
         app.acceptEvent(event);
 
         assertTrue(event.isAccepted());
     }
 
     @Test
-    public void testSearchEventsReturnsTrue()
+    void testSearchEventsReturnsTrue()
     {
         app.addEvent(event);
         boolean i = app.isEventExisting(event);
@@ -100,7 +100,7 @@ class AppTest {
     }
 
     @Test
-    public void testRemoveEvent(){
+    void testRemoveEvent(){
 
         app.addEvent(event);
         app.removeEvent(event);
@@ -110,7 +110,7 @@ class AppTest {
 
 
     @Test
-    public void testRemoveNotExistingEvent(){
+    void testRemoveNotExistingEvent(){
 
         app.removeEvent(event);
 
