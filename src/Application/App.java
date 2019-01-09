@@ -9,33 +9,53 @@ import java.util.ArrayList;
 public class App {
 
 
-    protected ArrayList<Event> eventList = new ArrayList<>();
+    private ArrayList<Event> eventList = new ArrayList<>();
 
 
+    Event searchEvent(String searchData, SearchType searchType) {
 
-    Event searchEvent(String searchData, SearchType searchType){
+        Event eToReturn = null;
 
         switch (searchType) {
             case Name:
+                for (Event e : eventList) {
+                    if (e.getName().equals(searchData)) {
+                        eToReturn = e;
+                        break;
+                    }
+                }
                 break;
             case Date:
+                for (Event e : eventList) {
+                    if (e.getTime().toString().equals(searchData)) {
+                        eToReturn = e;
+                        break;
+                    }
+                }
                 break;
             case Place:
+                for (Event e : eventList) {
+                    if (e.getPlace().toString().equals(searchData)) {
+                        eToReturn = e;
+                        break;
+                    }
+                }
                 break;
-            case PlaceAndDate:
+            case HostUser:
+                for (Event e : eventList) {
+                    if (e.getEventCreator().toString().equals(searchData)) {
+                        eToReturn = e;
+                        break;
+                    }
+                }
                 break;
+            default:
+                throw new IllegalArgumentException("not entered switch");
         }
 
-        return new Event(new User());
+        return eToReturn;
     }
 
-//     public void addEvent(User user){
-//        Event e = new Event(user);
-//
-//        if (!eventList.contains(e)){
-//           eventList.add(e);
-//        }
-//    }
 
     public boolean addEvent(Event event){
         if (!eventList.contains(event)){
