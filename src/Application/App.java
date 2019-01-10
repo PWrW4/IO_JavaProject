@@ -71,7 +71,7 @@ public class App {
         }
         return false;
     } 
-    
+
     public void acceptEvent(Event e){
         e.setAccepted(true);
     }
