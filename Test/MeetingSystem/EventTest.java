@@ -1,6 +1,7 @@
 package MeetingSystem;
 
 import Application.App;
+import MeetingSystem.Builders.EventBuilder;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -11,7 +12,23 @@ import static org.junit.jupiter.api.Assertions.*;
 class EventTest {
 
     private App app = new App();
-    private Event event = new Event(new User());
+    private Event event = initEvent();
+
+    private Event initEvent(){
+        String name = "a";
+        String time = "jutro";
+        int minSlots = 1;
+        int maxSlots = 10;
+
+        String desc = "b";
+        Place p = new Place("wro","plac","na pwr");
+        String theme = "t";
+
+        EventBuilder eventBuilder = new EventBuilder(name,new User(),minSlots,maxSlots,time);
+        Event e = eventBuilder.build();
+
+        return e;
+    }
 
     @Test
     void testGetCurrentSlots() {
@@ -40,7 +57,7 @@ class EventTest {
 
     @Test
     void testGetPlace() {
-        Place place = new Place();
+        Place place = new Place("wro","plac","na pwr");
         event.setPlace(place);
         Place i = event.getPlace();
         assertEquals(place, i);
@@ -48,7 +65,7 @@ class EventTest {
 
     @Test
     void testSetPlace() {
-        Place place = new Place();
+        Place place = new Place("wro","plac","na pwr");
         event.setPlace(place);
         assertSame(event.getPlace(), place);
     }
@@ -56,16 +73,16 @@ class EventTest {
     @Test
     void testGetDescryption() {
         String desc = "abcd efgh";
-        event.setDescryption(desc);
-        String i = event.getDescryption();
+        event.setDescription(desc);
+        String i = event.getDescription();
         assertEquals(desc, i);
     }
 
     @Test
     void testSetDescryption() {
         String desc = "abcd efgh";
-        event.setDescryption(desc);
-        assertSame(event.getDescryption(), desc);
+        event.setDescription(desc);
+        assertSame(event.getDescription(), desc);
     }
 
     @Test

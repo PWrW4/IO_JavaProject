@@ -3,8 +3,14 @@ package MeetingSystem;
 public class Place {
 
     private String city;
-    private String addres;
-    private String descryption;
+    private String address;
+    private String description;
+
+    public Place(String city,String address, String description){
+        this.city = city;
+        this.address = address;
+        this.description = description;
+    }
 
     public String getCity() {
         return city;
@@ -14,19 +20,19 @@ public class Place {
         this.city = city;
     }
 
-    public String getAddres() {
-        return addres;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAddres(String addres) {
-        this.addres = addres;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public String getDescryption() {
-        return descryption;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescryption(String descryption) {
-        this.descryption = descryption;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

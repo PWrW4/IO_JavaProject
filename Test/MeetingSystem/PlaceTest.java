@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PlaceTest {
 
 
-    private Place place = new Place();
+    private Place place = new Place("wro","plac","na pwr");
 
     @Test
     void testSetCity() {
@@ -25,28 +25,28 @@ class PlaceTest {
 
     @Test
     void testSetAddres() {
-        place.setAddres("Test 12/3");
-        assertSame("Test 12/3", place.getAddres());
+        place.setAddress("Test 12/3");
+        assertSame("Test 12/3", place.getAddress());
     }
 
     @Test
     void testGetAddres() {
-        place.setAddres("Test 12/3");
-        String name = place.getAddres();
+        place.setAddress("Test 12/3");
+        String name = place.getAddress();
         String name1 = "Test 12/3";
         assertEquals(name1,name);
     }
 
     @Test
     void testSetDescryption() {
-        place.setDescryption("Klub 1");
-        assertEquals("Klub 1", place.getDescryption());
+        place.setDescription("Klub 1");
+        assertEquals("Klub 1", place.getDescription());
     }
 
     @Test
     void testGetDescryption() {
-        place.setDescryption("Klub 1");
-        String name = place.getDescryption();
+        place.setDescription("Klub 1");
+        String name = place.getDescription();
         String name1 = "Klub 1";
         assertEquals(name1,name);
     }

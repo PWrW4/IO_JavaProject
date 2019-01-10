@@ -1,25 +1,34 @@
 package MeetingSystem;
 
+import MeetingSystem.Builders.EventBuilder;
+
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class Event implements Comparable{
 
     private String name;
     private String theme;
-    private String descryption;
-    private Date time;
+    private String description;
+    private String time;
     private Place place;
     private int minSlots;
     private int maxSlots;
-    private int currentSlots;
-    private boolean accepted;
     private User eventCreator;
+    private int currentSlots = 0;
+    private boolean accepted = false;
     private List<User> userList = new ArrayList<>();
 
-    public Event(User user) {
-        setEventCreator(user);
+    public Event(EventBuilder eBuilder)
+    {
+        this.name = eBuilder.name;
+        this.theme = eBuilder.theme;
+        this.description = eBuilder.description;
+        this.time = eBuilder.time;
+        this.place = eBuilder.place;
+        this.minSlots = eBuilder.minSlots;
+        this.maxSlots = eBuilder.maxSlots;
+        this.eventCreator = eBuilder.eventCreator;
     }
 
     public int getMinSlots() {
@@ -62,20 +71,20 @@ public class Event implements Comparable{
         this.place = place;
     }
 
-    public Date getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Date time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
-    public String getDescryption() {
-        return descryption;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescryption(String descryption) {
-        this.descryption = descryption;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getTheme() {
