@@ -1,5 +1,6 @@
 package Application;
 
+import Helpers.SearchType;
 import MeetingSystem.Builders.EventBuilder;
 import MeetingSystem.Event;
 import MeetingSystem.Place;
@@ -10,22 +11,20 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
 
-    private App app = new App();
-    private Event event=initEvent();
+    private App app;
+    private Event event;
 
+    private String name = "a";
+    private String time = "jutro";
+    private int minSlots = 1;
+    private int maxSlots = 10;
 
+    String desc = "b";
+    Place p = new Place("wro","plac","na pwr");
+    String theme = "t";
 
 
     private Event initEvent(){
-        String name = "a";
-        String time = "jutro";
-        int minSlots = 1;
-        int maxSlots = 10;
-
-        String desc = "b";
-        Place p = new Place("wro","plac","na pwr");
-        String theme = "t";
-
         EventBuilder eventBuilder = new EventBuilder(name,new User(),minSlots,maxSlots,time);
         Event e = eventBuilder.build();
 
@@ -33,9 +32,55 @@ class AppTest {
     }
 
     @Test
+    void testSearchName(){
+        app = new App();
+        event = initEvent();
+        app.addEvent(event);
+
+        assertEquals(app.searchEvent(SearchType.Name, name), event);
+    }
+
+    @Test
+    void testSearchPlace(){
+        app = new App();
+        event = initEvent();
+        event.setPlace(p);
+        app.addEvent(event);
+
+        assertEquals(app.searchEvent(SearchType.Place, p.toString()), event);
+    }
+
+    @Test
+    void testSearchNullPlace(){
+        app = new App();
+        event = initEvent();
+        app.addEvent(event);
+
+        assertNull(app.searchEvent(SearchType.Place, p.toString()));
+    }
+
+    @Test
+    void testSearchHost(){
+        app = new App();
+        event = initEvent();
+        app.addEvent(event);
+
+        assertEquals(app.searchEvent(SearchType.HostUser, event.getEventCreator().toString()), event);
+    }
+
+    @Test
+    void testSearchTimeDate(){
+        app = new App();
+        event = initEvent();
+        app.addEvent(event);
+
+        assertEquals(app.searchEvent(SearchType.Date, time), event);
+    }
+
+    @Test
     void testAddEvent() {
-
-
+        app = new App();
+        event = initEvent();
         app.addEvent(event);
 
         if (app.addEvent(event)){
@@ -45,16 +90,17 @@ class AppTest {
 
     @Test
     void testAddEventWhichExist() {
-
+        app = new App();
+        event = initEvent();
         app.addEvent(event);
-
         assertFalse(app.addEvent(event));
     }
 
     @Test
     void testSignUserOnEvent(){
-
+        app = new App();
         User user = new User();
+        event = initEvent();
 
         event.setMaxSlots(12);
         event.setCurrentSlots(0);
@@ -67,8 +113,9 @@ class AppTest {
 
     @Test
     void testSignUserOnEventFull(){
-
+        app = new App();
         User user = new User();
+        event = initEvent();
 
         event.setMaxSlots(12);
         event.setCurrentSlots(12);
@@ -81,7 +128,9 @@ class AppTest {
 
     @Test
     void testSignOffUserFromEvent(){
+        app = new App();
         User user = new User();
+        event = initEvent();
 
         event.setMaxSlots(12);
         event.setCurrentSlots(0);
@@ -94,7 +143,9 @@ class AppTest {
 
     @Test
     void testSignOffUserFromEventUnsigned(){
+        app = new App();
         User user = new User();
+        event = initEvent();
 
         event.setMaxSlots(12);
         event.setCurrentSlots(0);
@@ -106,23 +157,17 @@ class AppTest {
 
     @Test
     void testAcceptEvent() {
+        app = new App();
+        event = initEvent();
         app.acceptEvent(event);
 
         assertTrue(event.isAccepted());
     }
 
     @Test
-    void testSearchEventsReturnsTrue()
-    {
-        app.addEvent(event);
-        boolean i = app.isEventExisting(event);
-
-        assertTrue(i);
-        //assertEquals(false, i);
-    }
-
-    @Test
     void testRemoveEvent(){
+        app = new App();
+        event = initEvent();
 
         app.addEvent(event);
         app.removeEvent(event);
@@ -133,6 +178,9 @@ class AppTest {
 
     @Test
     void testRemoveNotExistingEvent(){
+        app = new App();
+        event = initEvent();
+
 
         app.removeEvent(event);
 

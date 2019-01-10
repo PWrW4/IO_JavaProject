@@ -2,6 +2,7 @@ package Application;
 
 import Helpers.SearchType;
 import MeetingSystem.Event;
+import MeetingSystem.Place;
 import MeetingSystem.User;
 
 import java.util.ArrayList;
@@ -12,9 +13,12 @@ public class App {
     private ArrayList<Event> eventList = new ArrayList<>();
 
 
-    Event searchEvent(String searchData, SearchType searchType) {
+    Event searchEvent(SearchType searchType,String searchData) {
 
         Event eToReturn = null;
+
+        if (searchData.equals(""))
+            return null;
 
         switch (searchType) {
             case Name:
@@ -27,7 +31,7 @@ public class App {
                 break;
             case Date:
                 for (Event e : eventList) {
-                    if (e.getTime().toString().equals(searchData)) {
+                    if (e.getTime().equals(searchData)) {
                         eToReturn = e;
                         break;
                     }
@@ -35,6 +39,9 @@ public class App {
                 break;
             case Place:
                 for (Event e : eventList) {
+                    if (e.getPlace()==null){
+                        return null;
+                    }
                     if (e.getPlace().toString().equals(searchData)) {
                         eToReturn = e;
                         break;

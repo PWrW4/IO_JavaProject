@@ -4,6 +4,7 @@ import MeetingSystem.Builders.EventBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Event implements Comparable{
 
@@ -122,5 +123,45 @@ public class Event implements Comparable{
 
     public void setUserList(List<User> userList) {
         this.userList = userList;
+    }
+
+    @Override
+    public String toString() {
+        return "Event{" +
+                "name='" + name + '\'' +
+                ", theme='" + theme + '\'' +
+                ", description='" + description + '\'' +
+                ", time='" + time + '\'' +
+                ", place=" + place +
+                ", minSlots=" + minSlots +
+                ", maxSlots=" + maxSlots +
+                ", eventCreator=" + eventCreator +
+                ", currentSlots=" + currentSlots +
+                ", accepted=" + accepted +
+                ", userList=" + userList +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Event event = (Event) o;
+        return minSlots == event.minSlots &&
+                maxSlots == event.maxSlots &&
+                currentSlots == event.currentSlots &&
+                accepted == event.accepted &&
+                name.equals(event.name) &&
+                Objects.equals(theme, event.theme) &&
+                Objects.equals(description, event.description) &&
+                Objects.equals(time, event.time) &&
+                Objects.equals(place, event.place) &&
+                eventCreator.equals(event.eventCreator) &&
+                Objects.equals(userList, event.userList);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, theme, description, time, place, minSlots, maxSlots, eventCreator, currentSlots, accepted, userList);
     }
 }
