@@ -186,4 +186,16 @@ class AppTest {
 
         assertFalse(app.getEventList().contains(event));
     }
+
+    @Test
+    void testCheckEvent(){
+        app = new App();
+        event = initEvent();
+        event.setMinSlots(2);
+        event.setCurrentSlots(1);
+        app.addEvent(event);
+        app.checkAndRemoveSlotsEvent(event);
+
+        assertFalse(app.getEventList().contains(event));
+    }
 }

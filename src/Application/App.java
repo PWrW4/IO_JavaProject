@@ -72,12 +72,6 @@ public class App {
         return false;
     } 
     
-    public boolean isEventExisting(Event e) //Zwraca true je¿eli event istnieje
-    {
-    	if (eventList.contains(e)) return true;
-    	else return false;
-    } 
-    
     public void acceptEvent(Event e){
         e.setAccepted(true);
     }
@@ -92,17 +86,14 @@ public class App {
         }
     }
 
-    public void checkEvent(Event e){
-        if (e.getMinSlots()<e.getCurrentSlots()){
+    public void checkAndRemoveSlotsEvent(Event e){
+        if (e.getMinSlots()>e.getCurrentSlots()){
             removeEvent(e);
         }
     }
 
     public void signOffUserFromEvent(User u, Event e){
         e.getUserList().remove(u);
-    }
-
-    void editEvent(Event e){
     }
 
     public ArrayList<Event> getEventList() {
