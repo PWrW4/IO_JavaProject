@@ -5,14 +5,18 @@ import Helpers.SearchType;
 import MeetingSystem.Builders.EventBuilder;
 import MeetingSystem.Event;
 import MeetingSystem.User;
+import fit.ColumnFixture;
 
 
-public class SingUp {
+public class SingUp extends ColumnFixture {
 
-    private int min;
-    private int max;
-    private int current;
-
+    public int min;
+    public int max;
+    public int current;
+    public App app;
+    SingUp(){
+        app = new App();
+    }
     public void setMin(int min) {
         this.min = min;
     }
@@ -33,7 +37,7 @@ public class SingUp {
     }
 
     public String singUp(){
-        App app = new App();
+        //App app = new App();
         Event event = createEvent();
         User user = new User();
         app.addEvent(event);
@@ -48,13 +52,16 @@ public class SingUp {
 }
 
 
-//       !| eg.SingUp |
+//!define TEST_SYSTEM {slim}
+//        !path C:\Workspace\IO_Meetup\out\test\IO_Meetup\AcceptanceTests\SingUp.class
+//
+//!| SingUp |
 //        | min | max | current | singUp? |
-//        | 3   | 10  | 2       | yes 	  |
-//        | 10  | 10  | 1       | yes 	  |
-//        | 10  | 10  | 10      | no 	  |
-//        | 10  | 10  | 11      | no 	  |
-//        | 5   | 2   | 3       | no 	  |
-//        | 10  | 15  | 22      | no 	  |
-//        | 100 | 200 | 55      | yes 	  |
-//        | 50  | 51  | 50      | yes 	  |
+//        | 3   | 10  | 2       | yes 	|
+//        | 10  | 10  | 1       | yes 	|
+//        | 10  | 10  | 10      | no 	    |
+//        | 10  | 10  | 11      | no 	    |
+//        | 5   | 2   | 3       | no 	    |
+//        | 10  | 15  | 22      | no 	    |
+//        | 100 | 200 | 55      | yes 	|
+//        | 50  | 51  | 50      | yes 	|
