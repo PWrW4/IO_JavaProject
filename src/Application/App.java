@@ -64,7 +64,7 @@ public class App {
 
 
     public boolean addEvent(Event event){
-        if (!eventList.contains(event)){
+        if (!eventList.contains(event) && validateEvent(event)){
             eventList.add(event);
             return true;
         }
@@ -90,6 +90,22 @@ public class App {
             removeEvent(e);
         }
     }
+
+    public boolean validateEvent(Event event){
+        if (event.getName().equals("")){
+            return false;
+        }
+        if (event.getTime().equals("")){
+            return false;
+        }
+        if (event.getMinSlots()<=0){
+            return false;
+        }
+        if (event.getMaxSlots()>0 && event.getMaxSlots()<event.getMinSlots()){
+            return false;
+        }
+        return true;
+    };
 
     public void signOffUserFromEvent(User u, Event e){
         e.getUserList().remove(u);

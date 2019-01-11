@@ -198,4 +198,44 @@ class AppTest {
 
         assertFalse(app.getEventList().contains(event));
     }
+
+    @Test
+    void testValidateEventMinMax(){
+        app = new App();
+        event = initEvent();
+        event.setMinSlots(2);
+        event.setMaxSlots(1);
+        app.addEvent(event);
+
+        assertFalse(app.getEventList().contains(event));
+    }
+
+    @Test
+    void testValidateEventNoName(){
+        app = new App();
+        event = initEvent();
+        event.setName("");
+        app.addEvent(event);
+
+        assertFalse(app.getEventList().contains(event));
+    }
+
+    @Test
+    void testValidateEventCorrect(){
+        app = new App();
+        event = initEvent();
+        app.addEvent(event);
+
+        assertTrue(app.getEventList().contains(event));
+    }
+
+    @Test
+    void testValidateEventTimeNull(){
+        app = new App();
+        event = initEvent();
+        event.setTime("");
+        app.addEvent(event);
+
+        assertFalse(app.getEventList().contains(event));
+    }
 }
