@@ -2,7 +2,6 @@ package Application;
 
 import Helpers.SearchType;
 import MeetingSystem.Event;
-import MeetingSystem.Place;
 import MeetingSystem.User;
 
 import java.util.ArrayList;
@@ -13,7 +12,7 @@ public class App {
     private ArrayList<Event> eventList = new ArrayList<>();
 
 
-    Event searchEvent(SearchType searchType,String searchData) {
+    public Event searchEvent(SearchType searchType,String searchData) {
 
         Event eToReturn = null;
 
