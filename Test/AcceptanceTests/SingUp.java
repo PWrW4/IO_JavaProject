@@ -13,10 +13,7 @@ public class SingUp extends ColumnFixture {
     public int min;
     public int max;
     public int current;
-    public App app;
-    SingUp(){
-        app = new App();
-    }
+
     public void setMin(int min) {
         this.min = min;
     }
@@ -37,7 +34,7 @@ public class SingUp extends ColumnFixture {
     }
 
     public String singUp(){
-        //App app = new App();
+        App app = new App();
         Event event = createEvent();
         User user = new User();
         app.addEvent(event);
@@ -52,10 +49,12 @@ public class SingUp extends ColumnFixture {
 }
 
 
-//!define TEST_SYSTEM {slim}
-//        !path C:\Workspace\IO_Meetup\out\test\IO_Meetup\AcceptanceTests\SingUp.class
+//!define TEST_SYSTEM {fit}
+//        !path C:\Workspace\IO_Meetup\out\test\IO_Meetup
+//        !path C:\Workspace\IO_Meetup\out\production\IO_Meetup
 //
-//!| SingUp |
+//
+//        !| AcceptanceTests.SingUp |
 //        | min | max | current | singUp? |
 //        | 3   | 10  | 2       | yes 	|
 //        | 10  | 10  | 1       | yes 	|
