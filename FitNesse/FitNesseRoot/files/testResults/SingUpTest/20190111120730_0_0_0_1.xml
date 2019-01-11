@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20181224</FitNesseVersion>
+  <rootPath>SingUpTest</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>6</exceptions>
+    </counts>
+    <date>2019-01-11T12:07:31+01:00</date>
+    <runTimeInMillis>3</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=fit&lt;/span&gt;
+ &lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Workspace\IO_Meetup\out\test\IO_Meetup&lt;/span&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="4" class="error"&gt;AcceptanceTests.SingUp&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;java.lang.NoClassDefFoundError: Application/App
+	at AcceptanceTests.SingUp.execute(SingUp.java:18)
+	at fit.ColumnFixture.doRow(ColumnFixture.java:23)
+	at fit.Fixture.doRows(Fixture.java:162)
+	at fit.ColumnFixture.doRows(ColumnFixture.java:13)
+	at fit.Fixture.doTable(Fixture.java:156)
+	at fit.Fixture.interpretTables(Fixture.java:101)
+	at fit.Fixture.doTables(Fixture.java:81)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+Caused by: java.lang.ClassNotFoundException: Application.App
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 10 more
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;min&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;java.lang.NoClassDefFoundError: LApplication/App;
+	at java.lang.Class.getDeclaredFields0(Native Method)
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2583)
+	at java.lang.Class.getField0(Class.java:2975)
+	at java.lang.Class.getField(Class.java:1701)
+	at fit.Binding.makeAdapterForField(Binding.java:73)
+	at fit.Binding.makeAdapter(Binding.java:58)
+	at fit.Binding.create(Binding.java:44)
+	at fit.ColumnFixture.createBinding(ColumnFixture.java:73)
+	at fit.ColumnFixture.bindColumnHeadersToMethodsAndFields(ColumnFixture.java:65)
+	at fit.ColumnFixture.doRows(ColumnFixture.java:12)
+	at fit.Fixture.doTable(Fixture.java:156)
+	at fit.Fixture.interpretTables(Fixture.java:101)
+	at fit.Fixture.doTables(Fixture.java:81)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+Caused by: java.lang.ClassNotFoundException: Application.App
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 16 more
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+		&lt;td&gt;max&lt;/td&gt;
+		&lt;td&gt;current&lt;/td&gt;
+		&lt;td&gt;singUp?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;3&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;java.lang.NullPointerException
+	at fit.ColumnFixture.doCell(ColumnFixture.java:32)
+	at fit.Fixture.doCells(Fixture.java:174)
+	at fit.Fixture.doRow(Fixture.java:168)
+	at fit.ColumnFixture.doRow(ColumnFixture.java:21)
+	at fit.Fixture.doRows(Fixture.java:162)
+	at fit.ColumnFixture.doRows(ColumnFixture.java:13)
+	at fit.Fixture.doTable(Fixture.java:156)
+	at fit.Fixture.interpretTables(Fixture.java:101)
+	at fit.Fixture.doTables(Fixture.java:81)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+		&lt;td class="error"&gt;10&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;java.lang.NullPointerException
+	at fit.ColumnFixture.doCell(ColumnFixture.java:32)
+	at fit.Fixture.doCells(Fixture.java:174)
+	at fit.Fixture.doRow(Fixture.java:168)
+	at fit.ColumnFixture.doRow(ColumnFixture.java:21)
+	at fit.Fixture.doRows(Fixture.java:162)
+	at fit.ColumnFixture.doRows(ColumnFixture.java:13)
+	at fit.Fixture.doTable(Fixture.java:156)
+	at fit.Fixture.interpretTables(Fixture.java:101)
+	at fit.Fixture.doTables(Fixture.java:81)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+		&lt;td class="error"&gt;2&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;java.lang.NullPointerException
+	at fit.ColumnFixture.doCell(ColumnFixture.java:32)
+	at fit.Fixture.doCells(Fixture.java:174)
+	at fit.Fixture.doRow(Fixture.java:168)
+	at fit.ColumnFixture.doRow(ColumnFixture.java:21)
+	at fit.Fixture.doRows(Fixture.java:162)
+	at fit.ColumnFixture.doRows(ColumnFixture.java:13)
+	at fit.Fixture.doTable(Fixture.java:156)
+	at fit.Fixture.interpretTables(Fixture.java:101)
+	at fit.Fixture.doTables(Fixture.java:81)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+		&lt;td class="error"&gt;yes&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;java.lang.NullPointerException
+	at fit.ColumnFixture.doCell(ColumnFixture.java:32)
+	at fit.Fixture.doCells(Fixture.java:174)
+	at fit.Fixture.doRow(Fixture.java:168)
+	at fit.ColumnFixture.doRow(ColumnFixture.java:21)
+	at fit.Fixture.doRows(Fixture.java:162)
+	at fit.ColumnFixture.doRows(ColumnFixture.java:13)
+	at fit.Fixture.doTable(Fixture.java:156)
+	at fit.Fixture.interpretTables(Fixture.java:101)
+	at fit.Fixture.doTables(Fixture.java:81)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;yes&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;no&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;11&lt;/td&gt;
+		&lt;td&gt;no&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;5&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td&gt;no&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;15&lt;/td&gt;
+		&lt;td&gt;22&lt;/td&gt;
+		&lt;td&gt;no&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;100&lt;/td&gt;
+		&lt;td&gt;200&lt;/td&gt;
+		&lt;td&gt;55&lt;/td&gt;
+		&lt;td&gt;yes&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;50&lt;/td&gt;
+		&lt;td&gt;51&lt;/td&gt;
+		&lt;td&gt;50&lt;/td&gt;
+		&lt;td&gt;yes&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>SingUpTest</relativePageName>
+          </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>"C:\Program Files (x86)\Java\jdk1.8.0_181\bin\java" -cp C:\Workspace\IO_Meetup\FitNesse\fitnesse-standalone.jar;C:\Workspace\IO_Meetup\out\test\IO_Meetup fit.FitServer wojtasiq-lenovo 55214 3863</command>
+    <exitCode>6</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>644</totalRunTimeInMillis>
+</testResults>
+

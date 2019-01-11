@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20181224</FitNesseVersion>
+  <rootPath>SingUpTest</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+    <date>2019-01-11T11:56:12+01:00</date>
+    <runTimeInMillis>3</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=fit&lt;/span&gt;
+ &lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Workspace\IO_Meetup\out\test\IO_Meetup&lt;/span&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="4" class="error"&gt;AcceptanceTests.SingUp&lt;hr&gt;&lt;pre&gt;&lt;div class="fit_stacktrace"&gt;java.lang.IllegalAccessException: Class fit.FixtureClass can not access a member of class AcceptanceTests.SingUp with modifiers ""
+	at sun.reflect.Reflection.ensureMemberAccess(Reflection.java:102)
+	at java.lang.Class.newInstance(Class.java:436)
+	at fit.FixtureClass.newInstance(FixtureClass.java:24)
+	at fit.FixtureLoader.instantiateFixture(FixtureLoader.java:61)
+	at fit.FixtureLoader.instantiateFirstValidFixtureClass(FixtureLoader.java:82)
+	at fit.FixtureLoader.disgraceThenLoad(FixtureLoader.java:43)
+	at fit.Fixture.loadFixture(Fixture.java:142)
+	at fit.Fixture.getLinkedFixtureWithArgs(Fixture.java:134)
+	at fit.Fixture.doTables(Fixture.java:79)
+	at fit.FitServer.process(FitServer.java:81)
+	at fit.FitServer.run(FitServer.java:56)
+	at fit.FitServer.main(FitServer.java:41)
+&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;min&lt;/td&gt;
+		&lt;td&gt;max&lt;/td&gt;
+		&lt;td&gt;current&lt;/td&gt;
+		&lt;td&gt;singUp?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;yes&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;yes&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;no&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;11&lt;/td&gt;
+		&lt;td&gt;no&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;5&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td&gt;no&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;15&lt;/td&gt;
+		&lt;td&gt;22&lt;/td&gt;
+		&lt;td&gt;no&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;100&lt;/td&gt;
+		&lt;td&gt;200&lt;/td&gt;
+		&lt;td&gt;55&lt;/td&gt;
+		&lt;td&gt;yes&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;50&lt;/td&gt;
+		&lt;td&gt;51&lt;/td&gt;
+		&lt;td&gt;50&lt;/td&gt;
+		&lt;td&gt;yes&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>SingUpTest</relativePageName>
+          </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>"C:\Program Files (x86)\Java\jdk1.8.0_181\bin\java" -cp C:\Workspace\IO_Meetup\FitNesse\fitnesse-standalone.jar;C:\Workspace\IO_Meetup\out\test\IO_Meetup fit.FitServer wojtasiq-lenovo 55120 3863</command>
+    <exitCode>1</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>645</totalRunTimeInMillis>
+</testResults>
+

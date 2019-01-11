@@ -1,0 +1,13 @@
+!define TEST_SYSTEM {fit}
+!path C:\Workspace\IO_Meetup\out\test\IO_Meetup
+!path C:\Workspace\IO_Meetup\out\production\IO_Meetup
+!| AcceptanceTests.AddEvent |
+| name | min | max | time | current | added? |
+| asd | 3 | 10 | jutro | 2 | yes |
+| piwo | 10 | 10 | codiennie | 1 | yes |
+| pilka | 10 | 10 | null | 10 | no |
+| siatka | 10 | 11 | sroda | 11 | yes |
+| kosz | 5 | 2 | czwartek | 3 | no |
+| null | 10 | 15 | co 2 tygodnie | 22 | no |
+| kocert | 100 | 200 | null | 55 | no |
+| wiersze | 50 | 51 | piatek | 50 | yes |

@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20181224</FitNesseVersion>
+  <rootPath>SingUpTest</rootPath>
+    <result>
+    <counts>
+      <right>8</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2019-01-11T12:12:31+01:00</date>
+    <runTimeInMillis>3</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=fit&lt;/span&gt;
+ &lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Workspace\IO_Meetup\out\production\IO_Meetup&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Workspace\IO_Meetup\out\test\IO_Meetup&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="4"&gt;AcceptanceTests.SingUp&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;min&lt;/td&gt;
+		&lt;td&gt;max&lt;/td&gt;
+		&lt;td&gt;current&lt;/td&gt;
+		&lt;td&gt;singUp?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td class="pass"&gt;yes&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td class="pass"&gt;yes&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td class="pass"&gt;no&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;11&lt;/td&gt;
+		&lt;td class="pass"&gt;no&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;5&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td class="pass"&gt;no&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;15&lt;/td&gt;
+		&lt;td&gt;22&lt;/td&gt;
+		&lt;td class="pass"&gt;no&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;100&lt;/td&gt;
+		&lt;td&gt;200&lt;/td&gt;
+		&lt;td&gt;55&lt;/td&gt;
+		&lt;td class="pass"&gt;yes&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;50&lt;/td&gt;
+		&lt;td&gt;51&lt;/td&gt;
+		&lt;td&gt;50&lt;/td&gt;
+		&lt;td class="pass"&gt;yes&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>SingUpTest</relativePageName>
+          </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>"C:\Program Files (x86)\Java\jdk1.8.0_181\bin\java" -cp C:\Workspace\IO_Meetup\FitNesse\fitnesse-standalone.jar;C:\Workspace\IO_Meetup\out\production\IO_Meetup;C:\Workspace\IO_Meetup\out\test\IO_Meetup fit.FitServer wojtasiq-lenovo 55605 3863</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>1</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>869</totalRunTimeInMillis>
+</testResults>
+

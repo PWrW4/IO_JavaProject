@@ -1,0 +1,10 @@
+!define TEST_SYSTEM {fit}
+!path C:\Workspace\IO_Meetup\out\test\IO_Meetup
+!path C:\Workspace\IO_Meetup\out\production\IO_Meetup
+!| AcceptanceTests.SingOut |
+|singed| min | max | current | singOut? |
+|true| 3   | 10  | 2       | yes 	|
+|false| 10  | 10  | 1       | no 	|
+|true| 10  | 10  | 9      | yes 	    |
+|true| 5  | 15  | 5      | yes 	    |
+

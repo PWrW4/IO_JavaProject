@@ -1,0 +1,6 @@
+|SingOutTest||14:53:31 Pt, sty 11, 2019|
+|FrontPage||14:40:48 Pt, sty 11, 2019|
+|AddEventTest||14:35:57 Pt, sty 11, 2019|
+|SingUpTest||12:14:22 Pt, sty 11, 2019|
+|PaymentTest||10:02:27 Cz, sty 10, 2019|
+|JukeboxSuite||09:39:34 Cz, sty 10, 2019|

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20181224</FitNesseVersion>
+  <rootPath>SingOutTest</rootPath>
+    <result>
+    <counts>
+      <right>3</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2019-01-11T14:50:05+01:00</date>
+    <runTimeInMillis>4</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=fit&lt;/span&gt;
+&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Workspace\IO_Meetup\out\test\IO_Meetup&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Workspace\IO_Meetup\out\production\IO_Meetup&lt;/span&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="5"&gt;AcceptanceTests.SingOut&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;singed&lt;/td&gt;
+		&lt;td&gt;min&lt;/td&gt;
+		&lt;td&gt;max&lt;/td&gt;
+		&lt;td&gt;current&lt;/td&gt;
+		&lt;td&gt;singOut?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td class="pass"&gt;yes&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td class="pass"&gt;no&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;9&lt;/td&gt;
+		&lt;td class="pass"&gt;yes&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;</content>
+    <relativePageName>SingOutTest</relativePageName>
+          </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>"C:\Program Files (x86)\Java\jdk1.8.0_181\bin\java" -cp C:\Workspace\IO_Meetup\FitNesse\fitnesse-standalone.jar;C:\Workspace\IO_Meetup\out\test\IO_Meetup;C:\Workspace\IO_Meetup\out\production\IO_Meetup fit.FitServer wojtasiq-lenovo 57626 3863</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>1</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>394</totalRunTimeInMillis>
+</testResults>
+
